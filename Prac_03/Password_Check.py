@@ -1,19 +1,21 @@
+MINIMUM_PASSWORD_LENGTH = 5
+
+
 def main():
-user_password = get_password()
+    password = get_password()
+
+    print_asterisks(password)
 
 
-
-print(len(Password)*"*")
-
-
-Min_Length = 5
-
-def check_length():
-    if len(Password) < Min_Length:
-    Password = input("Enter Password: ")
-
+def print_asterisks(password):
+    print("*" * len(password))
 
 
 def get_password():
-    password = input("Enter Paassword: ")
+    password = input("Enter a password of at least {} characters: ".format(MINIMUM_PASSWORD_LENGTH))
+    while len(password) < MINIMUM_PASSWORD_LENGTH:
+        password = input("Enter a password of at least {} characters: ".format(MINIMUM_PASSWORD_LENGTH))
     return password
+
+
+main()
