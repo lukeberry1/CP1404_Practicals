@@ -10,8 +10,13 @@ numbers = [3, 1, 4, 1, 5, 9, 2]
 # print("3" in numbers)
 # print(numbers + [6, 5, 3])
 
-numbers.pop(0)
-numbers.insert(0, "ten")
+print(numbers)
+# numbers.pop(0)
+# print(numbers)
+# numbers.insert(0, "ten")
+# print(numbers)
+numbers[0] = "ten"
+print(numbers)
 
 numbers.pop()
 numbers.insert(7, 1)
