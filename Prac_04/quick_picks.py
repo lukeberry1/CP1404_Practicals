@@ -16,6 +16,5 @@ for j in range(number_of_quick_picks):
             number = random.randint(Min_number, Max_number)
         quick_pick_list.append(number)
         quick_pick_list.sort()
-    print(quick_pick_list)
-
+    print(" ".join("{:2}".format(number) for number in quick_pick_list))
 
