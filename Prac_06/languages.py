@@ -12,4 +12,3 @@ languages = [ruby, python, visual_basic]
 for language in languages:
     if language.is_dynamic():
         print(language.name)
-        
