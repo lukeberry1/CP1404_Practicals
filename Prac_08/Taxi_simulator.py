@@ -21,7 +21,8 @@ def main():
             taxi_choice = int(input("choose taxi:"))
             choosen_taxi = taxis[taxi_choice]
         elif choice == "B":
-            drive_taxi(choosen_taxi, total_bill)
+            if choosen_taxi is not None:
+                drive_taxi(choosen_taxi, total_bill)
         print("Bill to date ${}".format(total_bill))
         print(MENU)
         choice = input(">>>").upper()
