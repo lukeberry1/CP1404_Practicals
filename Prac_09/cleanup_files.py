@@ -6,17 +6,19 @@ Demos of various os module examples
 import os
 
 
-
-
-
-def get_fixed_filename(filename):
-    
+def get_fixed_filename():
+    filename = "SightNight"
+    splitted_name = []
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    return new_name
+    for letter in new_name:
+        if letter.isupper():
+            splitted_name = new_name.split(letter)
+        word = "{}{}".format(letter, splitted_name[1])
+
+        print(word)
 
 
 def demo_walk():
-
     os.chdir('Lyrics')
     for directory_name, subdirectories, filenames in os.walk('.'):
 
@@ -26,6 +28,5 @@ def demo_walk():
             os.rename(full_name, new_name)
 
 
-
-
-demo_walk()
+# demo_walk()
+get_fixed_filename()
